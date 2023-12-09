@@ -1,5 +1,4 @@
 import pip
-import subprocess
 
 test_mode = False
 
