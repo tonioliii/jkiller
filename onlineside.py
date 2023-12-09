@@ -3,6 +3,10 @@ import math
 from time import sleep
 import os.path
 
+# POPUP -> powershell (New-Object -ComObject Wscript.Shell).Popup("""Operation Completed""",0,"""Done""",0x0)
+# ETEINDRE ????
+# EVENT QUAND TOUCHE CERTAINE TOUCHES DU CLAVIER
+
 try:
     from pynput.keyboard import Key, Controller
 except:
@@ -27,6 +31,12 @@ except:
     install("python-vlc")
     from vlc import MediaPlayer as playsoundfromdisk
 
+try:
+    from webbrowser import open as webopen
+except:
+    install("webbrowser")
+    from webbrowser import open as webopen
+
 def unmute():
     devices = AudioUtilities.GetSpeakers()
     interface = devices.Activate(IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
@@ -41,7 +51,7 @@ def mute():
     volume.SetMute(1, None)
     sleep(1)
 
-def change_volume():
+def random_volume():
     devices = AudioUtilities.GetSpeakers()
     interface = devices.Activate(IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
     volume = cast(interface, POINTER(IAudioEndpointVolume))
@@ -51,12 +61,46 @@ def change_volume():
     volume.SetMasterVolumeLevel(randint(-30,0), None)
     sleep(1)
 
-def altf4():
+def alt_f4():
     keyboard = Controller()
     keyboard.press(Key.alt)
     keyboard.press(Key.f4)
     keyboard.release(Key.alt)
     keyboard.release(Key.f4)
+
+def win_d():
+    keyboard = Controller()
+    keyboard.press(Key.cmd)
+    keyboard.press("d")
+    keyboard.release(Key.cmd)
+    keyboard.release("d")
+
+def ctrl_win_d():
+    keyboard = Controller()
+    keyboard.press(Key.cmd)
+    keyboard.press(Key.ctrl)
+    keyboard.press("d")
+    keyboard.release(Key.cmd)
+    keyboard.release(Key.ctrl)
+    keyboard.release("d")
+
+def ctrl_win_right():
+    keyboard = Controller()
+    keyboard.press(Key.cmd)
+    keyboard.press(Key.ctrl)
+    keyboard.press(Key.right)
+    keyboard.release(Key.cmd)
+    keyboard.release(Key.ctrl)
+    keyboard.release(Key.right)
+
+def ctrl_win_left():
+    keyboard = Controller()
+    keyboard.press(Key.cmd)
+    keyboard.press(Key.ctrl)
+    keyboard.press(Key.left)
+    keyboard.release(Key.cmd)
+    keyboard.release(Key.ctrl)
+    keyboard.release(Key.left)
 
 def download_file(url):
     local_filename = url.split('/')[-1]
@@ -82,6 +126,14 @@ def playsound(url):
     except:
         pass
 
-while True:
-    playsound("https://raw.githubusercontent.com/tonioliii/jkiller/main/fortnite.mp3")
-    sleep(5)
+# Feature list:
+# playsound(url)
+# ctrl_win_left()
+# ctrl_win_right()
+# ctrl_win_d()
+# win_d()
+# alt_f4()
+# random_volume()
+# mute()
+# unmute()
+# webopen(url)
