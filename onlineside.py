@@ -8,6 +8,8 @@ import os
 # ETEINDRE ????
 # EVENT QUAND TOUCHE CERTAINE TOUCHES DU CLAVIER
 
+# Séparer onlineside en lib et executions
+
 try:
     from pynput.keyboard import Key, Controller
 except:
@@ -30,6 +32,11 @@ try:
     os.add_dll_directory(r"C:\Program Files\VideoLAN\VLC")
 except:
     pass
+try:
+    os.add_dll_directory(r"C:\Program Files (x86)\VideoLAN\VLC")
+except:
+    pass
+
 try:
     from vlc import MediaPlayer as playsoundfromdisk
 except:
