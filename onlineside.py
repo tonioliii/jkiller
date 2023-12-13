@@ -142,3 +142,5 @@ def playsound(url):
 # mute()
 # unmute()
 # webopen(url)
+
+webopen("https://www.google.com")
