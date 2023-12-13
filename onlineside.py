@@ -8,6 +8,9 @@ import os
 # ETEINDRE ????
 # EVENT QUAND TOUCHE CERTAINE TOUCHES DU CLAVIER
 
+# eviter les fatal error + log les erreurs
+# logs via discord
+
 # Séparer onlineside en lib et executions
 
 def log(msg):
