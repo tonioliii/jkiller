@@ -1,6 +1,6 @@
 import pip
 
-test_mode = True
+test_mode = False
 
 def install(package):
     if hasattr(pip, 'main'):
