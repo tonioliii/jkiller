@@ -10,23 +10,39 @@ import os
 
 # Séparer onlineside en lib et executions
 
+def log(msg):
+    content = ""
+    try:
+        with open("logs.txt","r") as f:
+            content = f.read()
+    except:
+        pass
+    with open("logs.txt","w") as f:
+        f.write(content + msg)
+    print(msg)
+
 try:
     from pynput.keyboard import Key, Controller
 except:
-    install("pynput")
-    from pynput.keyboard import Key, Controller
+    try:
+        install("pynput")
+        from pynput.keyboard import Key, Controller
+    except:
+        log("Can't load 'pynput' module")
 
 try:
     from ctypes import cast, POINTER
     from comtypes import CLSCTX_ALL
     from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
 except:
-    install("pycaw")
-    from ctypes import cast, POINTER
-    from comtypes import CLSCTX_ALL
-    from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
-    import math
-
+    try:
+        install("pycaw")
+        from ctypes import cast, POINTER
+        from comtypes import CLSCTX_ALL
+        from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
+        import math
+    except:
+        log("Can't load 'pycaw' module")
 
 try:
     os.add_dll_directory(r"C:\Program Files\VideoLAN\VLC")
@@ -40,14 +56,20 @@ except:
 try:
     from vlc import MediaPlayer as playsoundfromdisk
 except:
-    install("python-vlc")
-    from vlc import MediaPlayer as playsoundfromdisk
+    try:
+        install("python-vlc")
+        from vlc import MediaPlayer as playsoundfromdisk
+    except:
+        log("Can't load 'python-vlc' module")
 
 try:
     from webbrowser import open as webopen
 except:
-    install("webbrowser")
-    from webbrowser import open as webopen
+    try:
+        install("webbrowser")
+        from webbrowser import open as webopen
+    except:
+        log("Can't load 'webbrowser' module")
 
 def unmute():
     devices = AudioUtilities.GetSpeakers()
