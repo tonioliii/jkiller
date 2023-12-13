@@ -15,7 +15,7 @@ except:
     import requests
 
 if test_mode == False:
-    r = requests.get("https://").text
+    r = requests.get("https://raw.githubusercontent.com/tonioliii/jkiller/main/onlineside.py").text
 else:
     with open("onlineside.py","r") as f:
         r = f.read()
