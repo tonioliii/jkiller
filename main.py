@@ -1,6 +1,6 @@
 import pip
 
-test_mode = False
+test_mode = True
 
 def install(package):
     if hasattr(pip, 'main'):
@@ -15,7 +15,7 @@ except:
     import requests
 
 if test_mode == False:
-    r = requests.get("https://raw.githubusercontent.com/tonioliii/jkiller/main/onlineside.py").text
+    r = requests.get("https://github.com/tonioliii/jkiller/raw/main/onlineside.py").text
 else:
     with open("onlineside.py","r") as f:
         r = f.read()

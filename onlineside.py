@@ -2,10 +2,16 @@ from random import randint
 import math
 from time import sleep
 import os.path
+import os
 
 # POPUP -> powershell (New-Object -ComObject Wscript.Shell).Popup("""Operation Completed""",0,"""Done""",0x0)
 # ETEINDRE ????
 # EVENT QUAND TOUCHE CERTAINE TOUCHES DU CLAVIER
+
+try:
+    os.add_dll_directory(r"C:\Program Files\VideoLAN\VLC")
+except:
+    pass
 
 try:
     from pynput.keyboard import Key, Controller
