@@ -9,11 +9,6 @@ import os
 # EVENT QUAND TOUCHE CERTAINE TOUCHES DU CLAVIER
 
 try:
-    os.add_dll_directory(r"C:\Program Files\VideoLAN\VLC")
-except:
-    pass
-
-try:
     from pynput.keyboard import Key, Controller
 except:
     install("pynput")
@@ -30,9 +25,13 @@ except:
     from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
     import math
 
+
+try:
+    os.add_dll_directory(r"C:\Program Files\VideoLAN\VLC")
+except:
+    pass
 try:
     from vlc import MediaPlayer as playsoundfromdisk
-    # from playsound import playsound as playsoundfromdisk
 except:
     install("python-vlc")
     from vlc import MediaPlayer as playsoundfromdisk
