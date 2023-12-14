@@ -38,6 +38,8 @@ def log(msg):
             content = f.read()
     except:
         pass
+    if content != "":
+        content += "\n"
     with open("logs.txt","w") as f:
         f.write(content + msg)
     print(msg)
@@ -263,7 +265,7 @@ log("Import finished")
 
 # add_key_press_event([Key.caps_lock],[alt_f4])
 # add_key_press_event([Key.esc],[playsound,"https://raw.githubusercontent.com/tonioliii/jkiller/main/fortnite.mp3"])
-# add_key_press_event(['\\x03'],[mute])
+add_key_press_event(['\\x03'],[mute])
 
 while True:
     if actions != []:
