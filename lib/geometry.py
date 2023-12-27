@@ -1,7 +1,7 @@
 import win32gui
 from time import sleep
 from math import sqrt
-from main import *
+from .main import *
 
 def rectangle(x1,x2,y1,y2,color):
     hdc = win32gui.GetDC(0)
