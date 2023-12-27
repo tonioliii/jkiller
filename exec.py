@@ -38,7 +38,7 @@ listener.start()
 # add_key_press_event(['\\x03'],[mute])
 # add_key_press_event(['\\x03'],[set_sourire_on_screen])
 # add_key_press_event([Key.caps_lock],[set_sourire_on_screen,0xffe838])
-set_background("https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Exampledotcom.png/640px-Exampledotcom.png")
+# set_background("https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Exampledotcom.png/640px-Exampledotcom.png")
 
 while True:
     if actions != []:
