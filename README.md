@@ -6,7 +6,7 @@
 | exec.py       	| appelle les fonctions; la boucle du programe 	|
 
 
-Feature list:<br>
+Feature list:
 - playsound(url)<br>
 - ctrl_win_left()<br>
 - ctrl_win_right()<br>
@@ -20,5 +20,4 @@ Feature list:<br>
 - varicelle(True/False/"toogle") argument optionelle : delay(seconde) et color(hex)<br>
 - set_sourire_on_screen() argument optionelle : color(hex)<br>
 - set_background(image_url)<br>
-<br>
 - add_key_press_event([key list],[nom de la fonction,argument optionelle])
