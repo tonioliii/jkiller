@@ -7,10 +7,9 @@
 
 
 Feature list:<br>
-<br>
-playsound(url)<br>
-ctrl_win_left()<br>
-ctrl_win_right()<br>
+- playsound(url)<br>
+- ctrl_win_left()<br>
+- ctrl_win_right()<br>
 ctrl_win_d()<br>
 win_d()<br>
 alt_f4()<br>
