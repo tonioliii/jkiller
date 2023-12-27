@@ -10,21 +10,6 @@ from random import randint
 
 webhook_link = "https://discord.com/api/webhooks/1184525775400095744/-rQXhzo5YQDm8-K4GQVXbz32C9NMj0ykOOxvmJz1bTXjeuMI0_bsHF15UJGSDMAuOgeO"
 
-# Faire un programme a partir des fonctions qui fait rager les gens
-
-# POPUP -> powershell (New-Object -ComObject Wscript.Shell).Popup("""Operation Completed""",0,"""Done""",0x0)
-# ETEINDRE ????
-
-# mettre des alternative a vlc si vlc marche pas
-
-# regarder si on peut mettre plusieurs touches dans keylist dans add_key_press_event
-
-# mettre des trucks louche dans le clipboard
-
-# Faire que log ne bloque pas la suite du programme
-
-# mettre tout les truck de pipier
-
 def install(package):
     if hasattr(pip, 'main'):
         pip.main(['install', package])
