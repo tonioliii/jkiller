@@ -7,8 +7,8 @@
 
 
 Feature list:
-- playsound(url)<br>
-- ctrl_win_left()<br>
+- playsound(url)
+- ctrl_win_left()
 - ctrl_win_right()<br>
 - ctrl_win_d()<br>
 - win_d()<br>
