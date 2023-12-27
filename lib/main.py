@@ -229,23 +229,23 @@ def ctrl_win_left():
 
 def download_file(url):
     local_filename = url.split('/')[-1]
-    # NOTE the stream=True parameter below
-    with requests.get(url, stream=True) as r:
-        r.raise_for_status()
-        with open(local_filename, 'wb') as f:
-            for chunk in r.iter_content(chunk_size=8192): 
-                # If you have chunk encoded response uncomment if
-                # and set chunk_size parameter to None.
-                #if chunk: 
-                f.write(chunk)
+    check_file = os.path.isfile(local_filename)
+    if check_file == False:
+        # NOTE the stream=True parameter below
+        with requests.get(url, stream=True) as r:
+            r.raise_for_status()
+            with open(local_filename, 'wb') as f:
+                for chunk in r.iter_content(chunk_size=8192): 
+                    # If you have chunk encoded response uncomment if
+                    # and set chunk_size parameter to None.
+                    #if chunk: 
+                    f.write(chunk)
     return local_filename
 
 def playsound(url):
     try:
         name = url.split('/')[-1]
-        check_file = os.path.isfile(name)
-        if check_file == False:
-            download_file(url)
+        download_file(url)
         playsoundfromdisk(name).play()
         log(f"Sucessfuly playsound({url})")
     except Exception as E:

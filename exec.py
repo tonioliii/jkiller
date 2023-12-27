@@ -14,6 +14,7 @@ from lib.geometry import *
 # webopen(url)
 # varicelle(True/False/"toogle") argument optionelle : delay(seconde) et color(hex)
 # set_sourire_on_screen() argument optionelle : color(hex)
+# set_background(image_url)
 
 # add_key_press_event([key list],[nom de la fonction,argument optionelle])
 
@@ -37,7 +38,7 @@ listener.start()
 # add_key_press_event(['\\x03'],[mute])
 # add_key_press_event(['\\x03'],[set_sourire_on_screen])
 # add_key_press_event([Key.caps_lock],[set_sourire_on_screen,0xffe838])
-
+set_background("https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Exampledotcom.png/640px-Exampledotcom.png")
 
 while True:
     if actions != []:
