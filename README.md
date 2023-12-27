@@ -1,7 +1,9 @@
-main.py         fichier sur l'ordi, qui n'est jamais modifié
-onlineside.py   telechargeur
-lib/            toute les fonctions
-exec.py         appelle les fonctions; la boucle du programe
+| nom           	| fonction                                     	|
+|---------------	|----------------------------------------------	|
+| main.py       	| fichier sur l'ordi, qui n'est jamais modifié 	|
+| onlineside.py 	| telechargeur                                 	|
+| lib/          	| toute les fonctions                          	|
+| exec.py       	| appelle les fonctions; la boucle du programe 	|
 
 
 Feature list:
