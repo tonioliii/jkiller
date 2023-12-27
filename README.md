@@ -9,15 +9,15 @@
 Feature list:
 - playsound(url)
 - ctrl_win_left()
-- ctrl_win_right()<br>
-- ctrl_win_d()<br>
-- win_d()<br>
-- alt_f4()<br>
-- set_random_volume()<br>
-- mute()<br>
-- unmute()<br>
-- webopen(url)<br>
-- varicelle(True/False/"toogle") argument optionelle : delay(seconde) et color(hex)<br>
-- set_sourire_on_screen() argument optionelle : color(hex)<br>
-- set_background(image_url)<br>
+- ctrl_win_right()
+- ctrl_win_d()
+- win_d()
+- alt_f4()
+- set_random_volume()
+- mute()
+- unmute()
+- webopen(url)
+- varicelle(True/False/"toogle") argument optionelle : delay(seconde) et color(hex)
+- set_sourire_on_screen() argument optionelle : color(hex)
+- set_background(image_url)
 - add_key_press_event([key list],[nom de la fonction,argument optionelle])
