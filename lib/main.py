@@ -25,16 +25,16 @@ except:
 username = os.environ['COMPUTERNAME']
 
 def log(msg):
-    content = ""
-    try:
-        with open("logs.txt","r") as f:
-            content = f.read()
-    except:
-        pass
-    if content != "":
-        content += "\n"
-    with open("logs.txt","w") as f:
-        f.write(content + msg)
+    # content = ""
+    # try:
+    #     with open("logs.txt","r") as f:
+    #         content = f.read()
+    # except:
+    #     pass
+    # if content != "":
+    #     content += "\n"
+    # with open("logs.txt","w") as f:
+    #     f.write(content + msg)
     print(msg)
     data = {"content" : f"``{msg}``","username" : username}
     r = requests.post(webhook_link,json=data)
