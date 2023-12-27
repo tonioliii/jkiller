@@ -42,6 +42,6 @@ def set_sourire_on_screen(color=sourire_color):
         cercle(750,360,5,10,sourire_color)
         cercle(850,360,5,10,sourire_color)
         demi_cercle(800,410,70,5,sourire_color)
-        log("Sucessfuly set_sourire_on_screen")
+        log("Sucessfuly set_sourire_on_screen({color})")
     except Exception as E:
         log(f"Error {E} while trying to set_sourire_on_screen({color})")
