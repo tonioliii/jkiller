@@ -1,3 +1,5 @@
+Library python pour faire des blagues a vos amis heheheha.
+
 | nom           	| fonction                                     	|
 |---------------	|----------------------------------------------	|
 | main.py       	| fichier sur l'ordi, qui n'est jamais modifié 	|
