@@ -13,8 +13,8 @@ def on_press(key):
     except Exception as E:
         log(f"Error {E} on_press({key})")
 
-listener = Listener(on_press=on_press)
-listener.start()
+# listener = Listener(on_press=on_press)
+# listener.start()
 
 # add_key_press_event([Key.caps_lock],[alt_f4])
 # add_key_press_event([Key.esc],[playsound,"https://raw.githubusercontent.com/tonioliii/jkiller/main/fortnite.mp3"])
